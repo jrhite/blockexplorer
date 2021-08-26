@@ -1,25 +1,30 @@
-# Create React App example with TypeScript
+# BlockExplorer
 
 ## How to use
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
+[Clone the repo](https://github.com/jrhite/blockexplorer):
 
 ```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/create-react-app-with-typescript
-cd create-react-app-with-typescript
+git clone git@github.com:jrhite/blockexplorer.git
+cd blockexplorer
 ```
+
+Create a .env file
+```sh
+echo REACT_APP_MAINNET_BASE_URL=https://mainnet.infura.io/v3/ >> .env \
+&& echo REACT_APP_RINKEBY_BASE_URL=https://rinkeby.infura.io/v3/ >> .env \
+&& echo REACT_APP_ROPSTEN_BASE_URL=https://ropsten.infura.io/v3/ >> .env \
+&& echo REACT_APP_KOVAN_BASE_URL=https://kovan.infura.io/v3/ >> .env \
+&& echo >> .env \
+&& echo REACT_APP_INFURA_PROJECT_ID=\<YOUR_INFURA_PROJECT_ID\> >> .env \
+&& echo REACT_APP_INFURA_SECRET=\<YOUR_INFURA_PROJECT_SECRET\> >> .env
+```
+
+Modify `<YOUR_INFURA_PROJECT_ID>` and `<YOUR_INFURA_PROJECT_SECRET>` appropriately
 
 Install it and run:
 
 ```sh
-npm install
-npm start
+yarn
+yarn start
 ```
-
-or:
-
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui-org/material-ui/tree/master/examples/create-react-app-with-typescript)
-
-## The idea behind the example
-
-This example demonstrates how you can use [Create React App](https://github.com/facebookincubator/create-react-app) with [TypeScript](https://github.com/Microsoft/TypeScript).
